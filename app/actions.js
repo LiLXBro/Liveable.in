@@ -49,7 +49,7 @@ export async function logout() {
     cookies().delete('user_id'); // legacy
     cookies().delete('user_role'); // legacy
     cookies().delete('session_token');
-    revalidatePath('/');
+    redirect('/');
 }
 
 export async function getSession() {

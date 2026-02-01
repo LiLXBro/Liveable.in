@@ -52,14 +52,16 @@ export default function ProfileDropdown({ user }) {
 
                     <DropdownMenu.Separator className="h-px bg-slate-100 my-1" />
 
-                    <DropdownMenu.Item className="outline-none">
-                        {/* We use a form for server action logout consistency */}
-                        <form action={logout} className="w-full">
-                            <button className="flex w-full items-center gap-2 px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors cursor-pointer">
-                                <LogOut size={16} />
-                                <span>Logout</span>
-                            </button>
-                        </form>
+                    <DropdownMenu.Item
+                        className="outline-none flex w-full items-center gap-2 px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors cursor-pointer"
+                        onSelect={async (e) => {
+                            e.preventDefault(); // Prevent menu from closing immediately if we want to show loading, but here we just want to run the action. 
+                            // Actually, let it close. Redirect will handle the rest.
+                            await logout();
+                        }}
+                    >
+                        <LogOut size={16} />
+                        <span>Logout</span>
                     </DropdownMenu.Item>
 
                     <DropdownMenu.Arrow className="fill-white" />
