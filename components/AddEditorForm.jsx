@@ -20,7 +20,7 @@ export default function AddEditorForm() {
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-black transition-colors"
+                className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-black transition-colors w-fit h-fit"
             >
                 <UserPlus size={16} /> Add Editor
             </button>

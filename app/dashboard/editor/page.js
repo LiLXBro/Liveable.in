@@ -2,6 +2,7 @@ import { getBlogs, updateBlogStatus, getSession } from "@/app/actions";
 import { redirect } from "next/navigation";
 import { CheckCircle, XCircle, Edit } from 'lucide-react';
 import Link from 'next/link';
+import AdminBlogForm from "@/components/AdminBlogForm";
 
 export default async function EditorialDashboard() {
     const session = await getSession();
@@ -23,6 +24,11 @@ export default async function EditorialDashboard() {
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold text-slate-800">Editorial Dashboard</h1>
+                </div>
+
+                <div className="mb-12">
+                    {/* Editor can also write blogs */}
+                    <AdminBlogForm />
                 </div>
 
                 <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">

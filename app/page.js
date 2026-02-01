@@ -1,8 +1,6 @@
 import dynamic from 'next/dynamic';
 import VisionCarousel from '@/components/VisionCarousel';
 import Mission from '@/components/Mission';
-import VisionMission from '@/components/VisionMission';
-import DiversityCarousel from '@/components/DiversityCarousel';
 import RegistrationForm from '@/components/RegistrationForm';
 import { getChampions } from './actions';
 
