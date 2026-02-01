@@ -53,7 +53,7 @@ export default function LoginPage() {
                 </form>
 
                 <p className="text-center text-sm text-slate-500 mt-6">
-                    Don't have an account? <Link href="/#join" className="text-blue-600 font-semibold hover:underline">Register as Champion</Link>
+                    Don&apos;t have an account? <Link href="/#join" className="text-blue-600 font-semibold hover:underline">Register as Champion</Link>
                 </p>
             </div>
         </main>
