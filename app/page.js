@@ -31,7 +31,7 @@ export default async function Home() {
             */}
 
             {/* 3. Map & Registration Section */}
-            <section className="py-20 px-4 max-w-7xl mx-auto w-full">
+            <section id="join" className="py-20 px-4 max-w-7xl mx-auto w-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left/Top: Interactive Map */}
                     <div className="order-1 lg:order-1">

@@ -61,6 +61,11 @@ export default function RegistrationForm() {
                     </div>
                 </div>
 
+                <div>
+                    <label className="block text-xs font-semibold text-text-body mb-1">Password</label>
+                    <input name="password" type="password" required className="w-full p-2 rounded border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none" />
+                </div>
+
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="block text-xs font-semibold text-text-body mb-1">Email</label>

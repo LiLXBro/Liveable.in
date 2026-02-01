@@ -1,22 +1,206 @@
 {
   "node": {
-    "0c19f8bfc1ee9dafb1f21d9ef503116f34057f1c": {
+    "03ffdc590eff19ed1df0e05218b4a07e70c8dfe9": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22submitChampion%22%2C%22getChampions%22%5D%5D%5D&__client_imported__=!"
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc"
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "04969afeccee38b5ea382fd00fdc21baaabb1839": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "0c19f8bfc1ee9dafb1f21d9ef503116f34057f1c": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "122e88096ec91ecf9adeb68d9d6c0cb8f0c6556b": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "33c6b9c755cca0252095c0dfdabd59ba281402d9": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "47b64f15b61407826401950e31208125b4644352": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "4b75584554e25242802dafabac6f378f34397de9": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
       }
     },
     "603dc738ee6f0e9f5cece08f822355bec2266492": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22submitChampion%22%2C%22getChampions%22%5D%5D%5D&__client_imported__=!"
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc"
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "77983386a5872111a9ca8ed1e4ccecce42276c80": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "86a29953ac1d5ae6f1e1402827d10284a6f74d6d": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "90e2b416aef4942fba4763f676b847e0a981b707": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "b31b405076abd23c3d65f9bc1452c546aac686cf": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "ea5f732d8c523e441819ff1ee2e338bcab6adb68": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "ecba5f6c8a01c504b5edf319aaece6e4939708c9": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "f6b0c794f36a6c851ebc4e6dbd35afad778b9088": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
+      }
+    },
+    "e27486ca1313a9fa639582302bd5e6b03e59ca74": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc"
+      }
+    },
+    "b19a850ae3f152681588a0c0c70f029d336e7a7e": {
+      "workers": {
+        "app/dashboard/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cdashboard%5C%5Cadmin%5C%5Cpage.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!",
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CINTERN%5C%5CCLIC.org%5C%5Capp%5C%5Cactions.js%22%2C%5B%22commentOnBlog%22%2C%22deleteUser%22%2C%22submitChampion%22%2C%22login%22%2C%22getAdminStats%22%2C%22getBlogById%22%2C%22createBlog%22%2C%22getChampions%22%2C%22getHeaderUser%22%2C%22logout%22%2C%22voteBlog%22%2C%22updateProfile%22%2C%22createEditor%22%2C%22getBlogs%22%2C%22updateBlogStatus%22%2C%22getSession%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/admin/page": "rsc",
+        "app/page": "rsc",
+        "app/blog/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "9/XlmrrBdKoFUvUBvurVbGcgH3gtyhKaJIoLmeA44g8="
+  "encryptionKey": "0WbBjHQpo2U4qEXOzcKCuC/6I2RecfhoHG1gdflgkaA="
 }

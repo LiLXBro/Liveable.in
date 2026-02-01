@@ -1,57 +1,62 @@
-# CLIC.ORG
+# Liveable.in - Citizen Mobilization Platform
 
-Citizens for Liveable Indian Cities - Citizen Mobilization Platform.
+Connect citizens, champions, and editors to create liveable Indian cities.
 
-## Tech Stack
-- **Frontend/Backend**: Next.js 14 (App Router)
-- **Database**: PostgreSQL
-- **Styling**: Tailwind CSS
-- **Maps**: React Leaflet (OpenStreetMap)
+## Key Features
+*   **Role-Based Access**: Admin, Editor, Champion (User) roles.
+*   **Authentication**: Secure JWT-based session management.
+*   **Image Storage**: Fully database-driven (Base64) for profiles and blog posts - no external buckets required.
+*   **Interactive UI**: Mobile-responsive design with Charts.js analytics and Leaflet maps.
+*   **Supabase Integrated**: Powered by scalable Supabase PostgreSQL.
 
-## Setup & Run Locally
+## 🚀 Quick Setup
 
 ### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Environment Variables
-Create a `.env.local` file in the root directory:
-```bash
-DATABASE_URL="postgresql://user:password@localhost:5432/clic_db"
+### 2. Configure Environment
+Create `.env.local`:
+```env
+# Supabase Connection (Transaction Pooler - Port 6543)
+DATABASE_URL="postgresql://postgres.[project]:[password]@[host]:6543/postgres?pgbouncer=true"
+
+# Supabase Client Keys (for potential future use)
+NEXT_PUBLIC_SUPABASE_URL="https://[project].supabase.co"
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY="[public-key]"
+
+# Security
+JWT_SECRET="generate-a-strong-random-secret-here"
 ```
-*Note: You need a running PostgreSQL instance.*
 
 ### 3. Initialize Database
-Run the schema initialization script to create the `champions` table:
+Run the schema script to create tables (`users`, `champions`, `blogs`, `votes`, `comments`):
 ```bash
-node scripts/init-db.js
+node scripts/fix-schema.js
 ```
 
-### 4. Run Development Server
+### 4. Seed Data
+Create default Admin and Sample Content:
+```bash
+node scripts/seed-admin.js   # Creates admin@liveable.in / admin
+node scripts/seed-blog.js    # Adds sample stories
+```
+
+### 5. Run Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000)
+Visit [http://localhost:3000](http://localhost:3000)
 
-## Deployment
+## 📦 Deployment (Vercel)
 
-### Environment Variables (Crucial!)
-Since `.env.local` is not committed to Git, you must set these variables in your hosting provider's dashboard:
+Set the following **Environment Variables** in Vercel:
+1.  `DATABASE_URL`: Your Supabase Transaction Pooler URL (Port 6543).
+2.  `JWT_SECRET`: A strong secret key.
+3.  `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase URL.
+4.  `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`: Your Supabase Public Key.
 
-**Key**: `DATABASE_URL`
-
-#### On Render (Recommended)
-1.  Go to your **Web Service** dashboard.
-2.  Click **Environment**.
-3.  Add Variable: `DATABASE_URL` -> Value: **Internal Database URL** (from Render Postgres).
-
-#### On Netlify / Vercel
-1.  Go to **Site Settings** > **Environment Variables**.
-2.  Add Variable: `DATABASE_URL` -> Value: **External Database URL** (from Render Postgres).
-    *   *Note: Ensure you allow connections from 0.0.0.0/0 in Render, or the deployment might fail to connect.*
-
-1. Creates a **Web Service** on Render connected to this repo.
-2. Add Environment Variable `DATABASE_URL`.
-3. Build Command: `npm run build`
-4. Start Command: `npm start`
+## 🔑 Default Credentials
+*   **Admin**: `admin@liveable.in` / `admin`
+*   **Test Champion**: `champion@clic.org` / `champion123` (created by seed scripts)
