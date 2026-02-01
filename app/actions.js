@@ -199,18 +199,28 @@ export async function createBlog(prevState, formData) {
     const district = formData.get('district');
     const state = formData.get('state');
 
+    // Auto-approve for admins
+    const status = session.userRole === 'admin' ? 'approved' : 'pending';
+
     try {
         const client = await pool.connect();
         try {
             await client.query(`
-                INSERT INTO blogs (user_id, title, content, image_url, location_ward, location_block, location_district, location_state)
-                VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-            `, [session.userId, title, content, imageUrl, ward, block, district, state]);
+                INSERT INTO blogs (user_id, title, content, image_url, location_ward, location_block, location_district, location_state, status)
+                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+            `, [session.userId, title, content, imageUrl, ward, block, district, state, status]);
         } finally {
             client.release();
         }
-        revalidatePath('/dashboard/champion');
-        return { message: 'Blog submitted for review', success: true };
+
+        if (session.userRole === 'admin') {
+            revalidatePath('/dashboard/admin');
+            revalidatePath('/');
+        } else {
+            revalidatePath('/dashboard/champion');
+        }
+
+        return { message: session.userRole === 'admin' ? 'Blog published directly!' : 'Blog submitted for review', success: true };
     } catch (error) {
         console.error('Create Blog Error:', error);
         return { message: 'Failed to create blog', success: false };

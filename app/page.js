@@ -6,10 +6,18 @@ import DiversityCarousel from '@/components/DiversityCarousel';
 import RegistrationForm from '@/components/RegistrationForm';
 import { getChampions } from './actions';
 
-// Dynamically import map with no SSR
+// Dynamically import heavy components
 const ChampionsMap = dynamic(() => import('@/components/ChampionsMap'), {
     ssr: false,
     loading: () => <div className="h-[500px] w-full bg-slate-100 animate-pulse rounded-xl flex items-center justify-center text-slate-400">Loading Map...</div>
+});
+
+const VisionMission = dynamic(() => import('@/components/VisionMission'), {
+    loading: () => <div className="h-screen w-full bg-slate-50 animate-pulse" />
+});
+
+const DiversityCarousel = dynamic(() => import('@/components/DiversityCarousel'), {
+    ssr: true, // improved SEO but load js later? actually carousel usually needs client. let's keep ssr true but dynamic helps bundle splitting
 });
 
 export default async function Home() {

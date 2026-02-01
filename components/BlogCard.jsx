@@ -14,9 +14,11 @@ export default function BlogCard({ blog }) {
             )}
             <div className="p-5">
                 <div className="flex items-center gap-2 text-xs text-slate-500 mb-2 font-medium uppercase tracking-wider">
-                    <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-full">{blog.location_state}</span>
+                    <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-full">{blog.location_city}, {blog.location_state}</span>
                     <span>•</span>
                     <span>{new Date(blog.created_at).toLocaleDateString('en-GB')}</span>
+                    <span>•</span>
+                    <span className="font-semibold text-slate-700">{blog.author_name || 'Anonymous'}</span>
                 </div>
 
                 <Link href={`/blog/${blog.id}`} className="block group">

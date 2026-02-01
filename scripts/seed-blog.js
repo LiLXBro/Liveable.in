@@ -53,8 +53,14 @@ async function main() {
                 'https://images.unsplash.com/photo-1542601906990-24d4c16419d9?q=80&w=1000&auto=format&fit=crop', // Stock nature/city image
             ]);
             console.log('Created Sample Blog.');
+            console.log('Created Sample Blog.');
         } else {
-            console.log('Sample Blog already exists.');
+            // Fix: Update the image if the blog exists (in case the old URL is broken)
+            await pool.query('UPDATE blogs SET image_url = $1 WHERE title = $2', [
+                'https://placehold.co/800x400/2563eb/ffffff?text=Sustainable+Gangtok',
+                blogTitle
+            ]);
+            console.log('Updated existing Sample Blog image.');
         }
 
     } catch (err) {

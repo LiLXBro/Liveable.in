@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { BlogsByStateChart, UserDistributionChart, ActivityChart } from "@/components/AdminCharts";
 import { Trash2, Shield } from 'lucide-react';
 import AddEditorForm from "@/components/AddEditorForm";
+import AdminBlogForm from "@/components/AdminBlogForm";
 
 export default async function AdminDashboard() {
     const session = await getSession();
@@ -25,8 +26,12 @@ export default async function AdminDashboard() {
                     <h1 className="text-3xl font-bold text-slate-800">Admin Dashboard</h1>
                 </div>
 
-                <div className="mb-12">
+                <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    {/* Editor Management */}
                     <AddEditorForm />
+
+                    {/* Blog Creation */}
+                    <AdminBlogForm />
                 </div>
 
                 {/* Analytics Section */}
