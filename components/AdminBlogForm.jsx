@@ -2,7 +2,7 @@
 
 import { createBlog } from "@/app/actions";
 import { PlusCircle, Loader2 } from 'lucide-react';
-import { useFormStatus } from 'react-dom';
+import { useFormStatus, useFormState } from 'react-dom';
 
 function SubmitButton() {
     const { pending } = useFormStatus();
@@ -15,12 +15,19 @@ function SubmitButton() {
 }
 
 export default function AdminBlogForm() {
+    const [state, formAction] = useFormState(createBlog, null);
+
     return (
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8">
             <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
                 <PlusCircle size={20} /> Write New Blog
             </h2>
-            <form action={createBlog} className="space-y-4">
+            {state?.message && (
+                <div className={`mb-4 p-3 rounded-lg text-sm font-medium ${state.success ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                    {state.message}
+                </div>
+            )}
+            <form action={formAction} className="space-y-4">
                 <div>
                     <label className="block text-xs font-semibold text-slate-500 mb-1">Title</label>
                     <input name="title" required className="w-full text-sm p-2 rounded border border-slate-200 outline-none focus:border-blue-500" placeholder="e.g., Policy Update: New Green Zones" />
