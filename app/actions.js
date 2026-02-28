@@ -370,6 +370,62 @@ export async function updateBlogStatus(blogId, status) {
     }
 }
 
+export async function updateBlog(prevState, formData) {
+    const session = await getSession();
+    if (!session || !['admin', 'editor'].includes(session.userRole)) {
+        return { message: 'Unauthorized', success: false };
+    }
+
+    const blogId = formData.get('blog_id');
+    const title = formData.get('title');
+    const content = formData.get('content');
+    const ward = formData.get('ward');
+    const block = formData.get('block');
+    const district = formData.get('district');
+    const state = formData.get('state');
+
+    // Handle optional new image upload
+    const imageFile = formData.get('image_url');
+    let imageUrl = null;
+    if (imageFile instanceof File && imageFile.size > 0) {
+        imageUrl = await saveFile(imageFile);
+    }
+
+    try {
+        const client = await pool.connect();
+        try {
+            if (imageUrl) {
+                await client.query(`
+                    UPDATE blogs
+                    SET title = $1, content = $2, image_url = $3,
+                        location_ward = $4, location_block = $5,
+                        location_district = $6, location_state = $7
+                    WHERE id = $8
+                `, [title, content, imageUrl, ward, block, district, state, blogId]);
+            } else {
+                await client.query(`
+                    UPDATE blogs
+                    SET title = $1, content = $2,
+                        location_ward = $3, location_block = $4,
+                        location_district = $5, location_state = $6
+                    WHERE id = $7
+                `, [title, content, ward, block, district, state, blogId]);
+            }
+        } finally {
+            client.release();
+        }
+
+        revalidatePath('/dashboard/admin');
+        revalidatePath(`/blog/${blogId}`);
+        revalidatePath('/');
+        return { message: 'Blog updated successfully!', success: true };
+    } catch (error) {
+        console.error('Update Blog Error:', error);
+        return { message: 'Failed to update blog', success: false };
+    }
+}
+
+
 // --- Admin Actions ---
 
 export async function createEditor(prevState, formData) {

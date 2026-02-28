@@ -1,7 +1,8 @@
 import { getAdminStats, getBlogs, deleteUser, getSession, createEditor } from "@/app/actions";
 import { redirect } from "next/navigation";
 import { BlogsByStateChart, UserDistributionChart, ActivityChart } from "@/components/AdminCharts";
-import { Trash2, Shield } from 'lucide-react';
+import { Trash2, Pencil } from 'lucide-react';
+import Link from "next/link";
 import AddEditorForm from "@/components/AddEditorForm";
 import AdminBlogForm from "@/components/AdminBlogForm";
 
@@ -63,8 +64,19 @@ export default async function AdminDashboard() {
                                     <tr key={blog.id}>
                                         <td className="p-4">{blog.title}</td>
                                         <td className="p-4">{blog.author_name}</td>
-                                        <td className="p-4 text-right text-red-600">
-                                            <button className="hover:bg-red-50 p-2 rounded"><Trash2 size={16} /></button>
+                                        <td className="p-4 text-right">
+                                            <div className="flex items-center justify-end gap-1">
+                                                <Link
+                                                    href={`/dashboard/admin/edit-blog/${blog.id}`}
+                                                    className="inline-flex items-center hover:bg-blue-50 text-blue-600 p-2 rounded transition-colors"
+                                                    title="Edit blog"
+                                                >
+                                                    <Pencil size={16} />
+                                                </Link>
+                                                <button className="hover:bg-red-50 text-red-600 p-2 rounded transition-colors" title="Delete blog">
+                                                    <Trash2 size={16} />
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 ))}
