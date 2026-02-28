@@ -233,8 +233,11 @@ export async function getBlogs(status = 'approved') {
         const client = await pool.connect();
         try {
             const query = `
-                SELECT b.*, u.email as author_email, 
-                       (SELECT first_name || ' ' || last_name FROM champions WHERE user_id = b.user_id) as author_name
+                SELECT b.*, u.email as author_email,
+                       COALESCE(
+                           (SELECT first_name || ' ' || last_name FROM champions WHERE user_id = b.user_id),
+                           INITCAP(u.role)
+                       ) as author_name
                 FROM blogs b
                 JOIN users u ON b.user_id = u.id
                 WHERE b.status = $1
@@ -257,8 +260,11 @@ export async function getBlogById(id) {
         try {
             // Get Blog
             const blogRes = await client.query(`
-                SELECT b.*, 
-                       (SELECT first_name || ' ' || last_name FROM champions WHERE user_id = b.user_id) as author_name
+                SELECT b.*,
+                       COALESCE(
+                           (SELECT first_name || ' ' || last_name FROM champions WHERE user_id = b.user_id),
+                           INITCAP((SELECT role FROM users WHERE id = b.user_id))
+                       ) as author_name
                 FROM blogs b
                 WHERE b.id = $1
             `, [id]);
