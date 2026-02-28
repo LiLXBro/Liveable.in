@@ -3,6 +3,9 @@ const nextConfig = {
     reactStrictMode: true,
     experimental: {
         serverComponentsExternalPackages: ['pg'],
+        serverActions: {
+            bodySizeLimit: '10mb', // Allow larger payloads for image uploads (base64 encoded)
+        },
     },
     eslint: {
         // Warning: This allows production builds to successfully complete even if
@@ -12,3 +15,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
