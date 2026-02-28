@@ -21,7 +21,7 @@ export default function BlogCard({ blog }) {
                     <span className="font-semibold text-slate-700">{blog.author_name || 'Anonymous'}</span>
                 </div>
 
-                <Link href={`/blog/${blog.id}`} className="block group">
+                <Link href={`/blog/${blog.slug || blog.id}`} className="block group">
                     <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">{blog.title}</h3>
                 </Link>
 
@@ -40,7 +40,7 @@ export default function BlogCard({ blog }) {
                             <span>{blog.downvotes}</span>
                         </div>
                     </div>
-                    <Link href={`/blog/${blog.id}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                    <Link href={`/blog/${blog.slug || blog.id}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
                         <MessageCircle size={16} />
                         <span>Read More</span>
                     </Link>

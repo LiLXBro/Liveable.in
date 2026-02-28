@@ -7,6 +7,18 @@ import { redirect } from 'next/navigation';
 import { hashPassword, verifyPassword, signToken, verifyToken } from '@/lib/auth';
 import { saveFile } from '@/lib/upload';
 
+// --- Slug Helper ---
+function slugify(title, id) {
+    const base = title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')   // remove special chars
+        .replace(/[\s_]+/g, '-')     // spaces/underscores → hyphens
+        .replace(/-+/g, '-')         // collapse multiple hyphens
+        .slice(0, 80);               // cap length
+    return `${base}-${id}`;
+}
+
 // --- Authentication ---
 
 export async function login(prevState, formData) {
@@ -205,10 +217,16 @@ export async function createBlog(prevState, formData) {
     try {
         const client = await pool.connect();
         try {
-            await client.query(`
+            const res = await client.query(`
                 INSERT INTO blogs (user_id, title, content, image_url, location_ward, location_block, location_district, location_state, status)
                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+                RETURNING id
             `, [session.userId, title, content, imageUrl, ward, block, district, state, status]);
+
+            // Generate slug from title + id and store it
+            const blogId = res.rows[0].id;
+            const slug = slugify(title, blogId);
+            await client.query('UPDATE blogs SET slug = $1 WHERE id = $2', [slug, blogId]);
         } finally {
             client.release();
         }
@@ -253,6 +271,40 @@ export async function getBlogs(status = 'approved') {
     }
 }
 
+
+export async function getBlogBySlug(slug) {
+    try {
+        const client = await pool.connect();
+        try {
+            const blogRes = await client.query(`
+                SELECT b.*,
+                       COALESCE(
+                           (SELECT first_name || ' ' || last_name FROM champions WHERE user_id = b.user_id),
+                           INITCAP((SELECT role FROM users WHERE id = b.user_id))
+                       ) as author_name
+                FROM blogs b
+                WHERE b.slug = $1
+            `, [slug]);
+
+            if (blogRes.rows.length === 0) return null;
+            const blog = blogRes.rows[0];
+
+            const commentsRes = await client.query(`
+                SELECT c.*,
+                       COALESCE((SELECT first_name || ' ' || last_name FROM champions WHERE user_id = c.user_id), c.guest_name) as author_name
+                FROM comments c
+                WHERE c.blog_id = $1
+                ORDER BY c.created_at DESC
+            `, [blog.id]);
+
+            return { ...blog, comments: commentsRes.rows };
+        } finally {
+            client.release();
+        }
+    } catch (error) {
+        return null;
+    }
+}
 
 export async function getBlogById(id) {
     try {
@@ -405,17 +457,19 @@ export async function updateBlog(prevState, formData) {
                     UPDATE blogs
                     SET title = $1, content = $2, image_url = $3,
                         location_ward = $4, location_block = $5,
-                        location_district = $6, location_state = $7
-                    WHERE id = $8
-                `, [title, content, imageUrl, ward, block, district, state, blogId]);
+                        location_district = $6, location_state = $7,
+                        slug = $8
+                    WHERE id = $9
+                `, [title, content, imageUrl, ward, block, district, state, slugify(title, blogId), blogId]);
             } else {
                 await client.query(`
                     UPDATE blogs
                     SET title = $1, content = $2,
                         location_ward = $3, location_block = $4,
-                        location_district = $5, location_state = $6
-                    WHERE id = $7
-                `, [title, content, ward, block, district, state, blogId]);
+                        location_district = $5, location_state = $6,
+                        slug = $7
+                    WHERE id = $8
+                `, [title, content, ward, block, district, state, slugify(title, blogId), blogId]);
             }
         } finally {
             client.release();

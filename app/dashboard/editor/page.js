@@ -56,7 +56,7 @@ export default async function EditorialDashboard() {
                                     {pendingBlogs.map(blog => (
                                         <tr key={blog.id} className="hover:bg-slate-50 transition-colors">
                                             <td className="p-4">
-                                                <Link href={`/blog/${blog.id}`} className="font-semibold text-slate-800 hover:text-blue-600 block mb-1">
+                                                <Link href={`/blog/${blog.slug || blog.id}`} className="font-semibold text-slate-800 hover:text-blue-600 block mb-1">
                                                     {blog.title}
                                                 </Link>
                                                 <p className="text-xs text-slate-500 line-clamp-1 max-w-xs">{blog.content}</p>
